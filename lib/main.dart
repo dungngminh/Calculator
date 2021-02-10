@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'main_screen.dart';
+import 's1mple_calculator.dart';
 
 void main() => runApp(Calculator());
-
 class Calculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,6 @@ class Calculator extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MainScreen(),
-    );
-  }
+      home: S1mpleCalculator(),
+    );}
 }
