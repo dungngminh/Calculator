@@ -125,7 +125,7 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width: MediaQuery.of(context).size.width * 0.8,
+                width: MediaQuery.of(context).size.width * 1,
                 child: Table(
                   children: [
                     TableRow(
@@ -171,18 +171,7 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
                   ],
                 ),
               ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.2,
-                child: Table(
-                  children: [
-                    TableRow(
-                      children: [
-                        keyButton("0", 1, Colors.black),
-                      ],
-                    )
-                  ],
-                ),
-              ),
+              
             ],
           ),
         ],
@@ -210,9 +199,10 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
                   Text(
                     "của dtp",
                     style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black,),
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
@@ -238,8 +228,10 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
               textAlign: TextAlign.center,
             ),
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => ScientificCalculator()));
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ScientificCalculator()));
             },
           ),
         ],
