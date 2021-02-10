@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
 
+import 'scientific_calculator.dart';
+
 class S1mpleCalculator extends StatefulWidget {
   @override
   _S1mpleCalculatorState createState() => _S1mpleCalculatorState();
@@ -93,7 +95,7 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Máy tính"),
+        title: Text("Máy tính cơ bản"),
       ),
       drawer: typeOfCalculator(),
       body: Column(
@@ -194,14 +196,25 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
         children: <Widget>[
           DrawerHeader(
             child: Container(
-              // width: double.infinity,
+              width: double.infinity,
               alignment: Alignment.center,
-              child: Text(
-                "Máy tính",
-                style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
+              child: Column(
+                children: <Widget>[
+                  Text(
+                    "Máy tính",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                  Text(
+                    "của dtp",
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.black,),
+                  ),
+                ],
               ),
             ),
           ),
@@ -218,13 +231,16 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
             },
           ),
           ListTile(
-            enabled: false,
+            enabled: true,
             title: Text(
               "Máy tính khoa học",
               style: TextStyle(fontSize: 20),
               textAlign: TextAlign.center,
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => ScientificCalculator()));
+            },
           ),
         ],
       ),
