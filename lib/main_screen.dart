@@ -96,82 +96,84 @@ class _MainScreenState extends State<MainScreen> {
         title: Text("Máy tính"),
       ),
       drawer: typeOfCalculator(),
-      body: Column(
-        children: <Widget>[
-          Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.fromLTRB(10, 18, 10, 0),
-            child: Text(
-              equation,
-              style: TextStyle(
-                fontSize: equationSize,
-              ),
-            ),
-          ),
-          Container(
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.fromLTRB(10, 15, 10, 0),
-            child: Text(
-              result,
-              style: TextStyle(
-                fontSize: resultSize,
-              ),
-            ),
-          ),
-          Expanded(child: Divider()),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width * 1,
-                child: Table(
-                  children: [
-                    TableRow(
-                      children: [
-                        keyButton("C", 1, Colors.orange[700]),
-                        keyButton("⌫", 1, Colors.blue),
-                        keyButton("%", 1, Colors.blue),
-                        keyButton("÷", 1, Colors.blue),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        keyButton("7", 1, Colors.black38),
-                        keyButton("8", 1, Colors.black38),
-                        keyButton("9", 1, Colors.black38),
-                        keyButton("x", 1, Colors.blue),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        keyButton("4", 1, Colors.black38),
-                        keyButton("5", 1, Colors.black38),
-                        keyButton("6", 1, Colors.black38),
-                        keyButton("-", 1, Colors.blue),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        keyButton("1", 1, Colors.black38),
-                        keyButton("2", 1, Colors.black38),
-                        keyButton("3", 1, Colors.black38),
-                        keyButton("+", 1, Colors.blue),
-                      ],
-                    ),
-                    TableRow(
-                      children: [
-                        keyButton("00", 1, Colors.black38),
-                        keyButton("0", 1, Colors.black38),
-                        keyButton(".", 1, Colors.black38),
-                        keyButton("=", 1, Colors.redAccent),
-                      ],
-                    ),
-                  ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Container(
+              alignment: Alignment.centerRight,
+              padding: EdgeInsets.fromLTRB(10, 18, 10, 0),
+              child: Text(
+                equation,
+                style: TextStyle(
+                  fontSize: equationSize,
                 ),
               ),
-            ],
-          ),
-        ],
+            ),
+            Container(
+              alignment: Alignment.centerRight,
+              padding: EdgeInsets.fromLTRB(10, 15, 10, 0),
+              child: Text(
+                result,
+                style: TextStyle(
+                  fontSize: resultSize,
+                ),
+              ),
+            ),
+            Expanded(child: Divider()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: MediaQuery.of(context).size.width * 1,
+                  child: Table(
+                    children: [
+                      TableRow(
+                        children: [
+                          keyButton("C", 1, Colors.orange[700]),
+                          keyButton("⌫", 1, Colors.blue),
+                          keyButton("%", 1, Colors.blue),
+                          keyButton("÷", 1, Colors.blue),
+                        ],
+                      ),
+                      TableRow(
+                        children: [
+                          keyButton("7", 1, Colors.black38),
+                          keyButton("8", 1, Colors.black38),
+                          keyButton("9", 1, Colors.black38),
+                          keyButton("x", 1, Colors.blue),
+                        ],
+                      ),
+                      TableRow(
+                        children: [
+                          keyButton("4", 1, Colors.black38),
+                          keyButton("5", 1, Colors.black38),
+                          keyButton("6", 1, Colors.black38),
+                          keyButton("-", 1, Colors.blue),
+                        ],
+                      ),
+                      TableRow(
+                        children: [
+                          keyButton("1", 1, Colors.black38),
+                          keyButton("2", 1, Colors.black38),
+                          keyButton("3", 1, Colors.black38),
+                          keyButton("+", 1, Colors.blue),
+                        ],
+                      ),
+                      TableRow(
+                        children: [
+                          keyButton("00", 1, Colors.black38),
+                          keyButton("0", 1, Colors.black38),
+                          keyButton(".", 1, Colors.black38),
+                          keyButton("=", 1, Colors.redAccent),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -201,12 +203,15 @@ class _MainScreenState extends State<MainScreen> {
               textAlign: TextAlign.center,
             ),
             onTap: () {
+              if(context == MainScreen()){
+
+              }
               // Navigator.push(context,
               //     MaterialPageRoute(builder: (context) => MainScreen()));
             },
           ),
           ListTile(
-            enabled: false,
+            enabled: true,
             title: Text(
               "Máy tính khoa học",
               style: TextStyle(fontSize: 20),
