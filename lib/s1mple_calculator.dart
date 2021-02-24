@@ -12,7 +12,7 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
   String equation = "1";
   String result = "1";
   String expression = "";
-
+  //code ngu vai l
   double equationSize = 45;
   double resultSize = 55;
 
