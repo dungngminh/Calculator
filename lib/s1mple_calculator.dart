@@ -9,8 +9,8 @@ class S1mpleCalculator extends StatefulWidget {
 }
 
 class _S1mpleCalculatorState extends State<S1mpleCalculator> {
-  String equation = "0";
-  String result = "0";
+  String equation = "1";
+  String result = "1";
   String expression = "";
 
   double equationSize = 45;
@@ -185,9 +185,10 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
         children: <Widget>[
           DrawerHeader(
             child: Container(
+
               width: double.infinity,
-              alignment: Alignment.center,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Text(
                     "Máy tính",
