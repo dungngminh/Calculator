@@ -61,7 +61,7 @@ class _ScientificCalculatorState extends State<ScientificCalculator> {
           ListTile(
             enabled: true,
             title: Text(
-              "Máy tính khoa học",
+              "Máy tính nhu l",
               style: TextStyle(fontSize: 20),
               textAlign: TextAlign.center,
             ),
