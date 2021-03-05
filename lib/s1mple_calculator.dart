@@ -171,7 +171,6 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
                   ],
                 ),
               ),
-              
             ],
           ),
         ],
@@ -185,7 +184,6 @@ class _S1mpleCalculatorState extends State<S1mpleCalculator> {
         children: <Widget>[
           DrawerHeader(
             child: Container(
-
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
