@@ -17,6 +17,7 @@ class _ScientificCalculatorState extends State<ScientificCalculator> {
       body: Column(),
     );
   }
+
   Widget typeOfCalculator() {
     return Drawer(
       child: ListView(
@@ -27,23 +28,24 @@ class _ScientificCalculatorState extends State<ScientificCalculator> {
               width: double.infinity,
               alignment: Alignment.center,
               child: Column(
-                  children: <Widget>[
-                    Text(
-                      "Máy tính",
-                      style: TextStyle(
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                children: <Widget>[
+                  Text(
+                    "Máy tính",
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
+                  Text(
+                    "của dtp",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.black,
                     ),
-                    Text(
-                      "của dtp",
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.normal,
-                          color: Colors.black,),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
+              ),
             ),
           ),
           ListTile(
@@ -66,8 +68,10 @@ class _ScientificCalculatorState extends State<ScientificCalculator> {
               textAlign: TextAlign.center,
             ),
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => ScientificCalculator()));
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ScientificCalculator()));
             },
           ),
         ],
